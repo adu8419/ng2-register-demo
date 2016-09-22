@@ -1,0 +1,50 @@
+.slider-box{ height:35px; background:#dfdfdf; margin-bottom:16px;}
+.nc_scale {
+    width: 318px !important;    /**验证区域大小**/
+    height: 34px;    /**验证区域大小**/
+    background: #e8e8e8;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+#clickCaptcha div {
+    position: static;
+    clear: both;
+    width: 100%;
+    background: #ffff;  /*验证区域底色*/
+    height: auto;
+}
+
+#clickCaptcha .clickCaptcha_img img {
+    width: 200px;    /**图片大小**/
+    height: 200px;   /**图片大小**/
+    margin-left: 0px;
+}
+
+#imgCaptcha, #clickCaptcha {
+    display: none;
+    overflow: hidden;
+    border: none;     /**图片边框**/
+    width: 298px;
+    _width: 270px;
+    z-index: 20000;
+}
+
+.nc-container #nc_1_wrapper, .nc-container.tb-login #nc_1_wrapper{
+	width:auto!important;
+}
+.nc-container.tb-login .errloading, .nc-container .errloading{
+	width:auto!important;
+}
+object{
+	display:none;
+}
+
+/*ali滑块样式*/
+.nc-container .nc_scale .clickCaptcha{
+	height: 210px !important;
+}
+.nc-container .clickCaptcha .clickCaptcha_img IMG{
+	width:170px !important;
+	height:170px !important;
+}

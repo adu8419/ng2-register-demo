@@ -1,0 +1,29 @@
+  <form [formGroup]="rgstartForm">
+    <h2>注册畅捷通帐号</h2>
+    <p id="slogan" class="fz12">一号直达好会计 · 工作圈 · 易代账 · 好生意 · T+ · 客户管家</p>
+    
+    <div class="group-input">
+      <span class="input-icon input-phone"></span>
+      <input  type="text" class="input-style" 
+        placeholder="手机号"  
+        formControlName = "mobilePhone"
+      />
+    </div>
+
+    <div  class="ma-j erro-box">
+       <control-messages [control]="rgstartForm.controls.mobilePhone" ></control-messages>
+    </div>
+   
+    <ali-security  (onAliPass)="onAliPass($event)"></ali-security>
+   
+    
+    <div class="xy-box clearfix">
+      <input  class="txt-check fl" checked="checked" type="checkbox"  formControlName="protocol">
+      <span class="fl fz12">已阅读并同意<a id="protocalA" class="link-color" href="/terms/account" target="_blank">《用户协议条款》</a></span>
+    </div>
+  
+    <div class="btn-box">
+      <button  class="btn-register" [ngClass]="setClasses()"   [disabled]="isDisabled()"  (click)="next()">下一步</button>
+    </div>
+  
+  </form>  
