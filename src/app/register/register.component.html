@@ -1,0 +1,82 @@
+<div class="register-box">
+    
+  <form [formGroup]="rgstartForm" *ngIf="!step">
+    <h2>注册畅捷通帐号</h2>
+    <p id="slogan" class="fz12">一号直达好会计 · 工作圈 · 易代账 · 好生意 · T+ · 客户管家</p>
+    
+    <div class="group-input">
+      <span class="input-icon input-phone"></span>
+      <input  type="text" class="input-style" 
+        placeholder="手机号"  
+        formControlName = "mobilePhone"
+      />
+    </div>
+
+    <div  class="ma-j erro-box">
+       <control-messages [control]="rgstartForm.controls.mobilePhone"></control-messages>
+    </div>
+   
+    <ali-security  (onAliPass)="onAliPass($event)"></ali-security>
+   
+    
+    <div class="xy-box clearfix">
+      <input  class="txt-check fl" checked="checked" type="checkbox"  formControlName="protocol">
+      <span class="fl fz12">已阅读并同意<a id="protocalA" class="link-color" href="/terms/account" target="_blank">《用户协议条款》</a></span>
+    </div>
+  
+    <div class="btn-box">
+      <button  class="btn-register" type="button" [ngClass]="setClasses(rgstartForm)"   [disabled]="isDisabled(rgstartForm)"  (click)="next()">下一步</button>
+    </div>
+  
+  </form>  
+
+
+
+  <form [formGroup]="rglastForm" *ngIf="step">
+    <h2>注册畅捷通帐号</h2>
+    <p class="fz12" id="subtitle">一号直达好会计 · 工作圈 · 易代账 · 好生意 · T+ · 客户管家</p>
+    
+    <div class="group-input">
+      <span class="input-icon input-phone"></span>
+      <input type="text" class="input-style" id="mobile" value="{{mobile}}"  disabled>
+     
+    </div>
+    
+     <div class="ma-j " ><span></span></div>
+    
+    <div class="group-input gp-control">
+      <span class="input-icon input-code"></span>
+      <input type="text" class="input-style" maxlength="8"  formControlName="codeSMS" (keyup)="handleKeyup('codeSMS')">
+      <button class="btn-code link-color" [ngClass]="{'btn-disabled': isSend}" (click)="handlerSendCodeClick()"  [disabled]="isSend">{{btnTitle}}</button>
+      <label class="placeholder-sty" ></label>
+    </div>
+     <div  class="ma-j erro-box" *ngIf='!codeEntity.message'>
+       <control-messages [control]="rglastForm.controls.codeSMS" ></control-messages>
+    </div>
+
+    <div  class="ma-j" [ngClass]="{'erro-box': !codeEntity.result, 'green-box': codeEntity.result}" *ngIf='codeEntity.message'>
+      {{codeEntity.message}}
+    </div>
+
+
+   
+    <div class="group-input  gp-control">
+      <span class="input-icon input-password"></span>
+      <input type="password" class="input-style" id="passwordInput" maxlength="20"
+         formControlName="pwd" (keyup)="handleKeyup('pwd')">
+      <label class="placeholder-sty" ></label>
+    </div>
+    <div  class="ma-j erro-box" *ngIf='!pwdEntity.message'>
+         <control-messages [control]="rglastForm.controls.pwd" ></control-messages>
+    </div>
+  
+    <div  class="ma-j" [ngClass]="{'erro-box': !pwdEntity.result, 'green-box': pwdEntity.result}" *ngIf='pwdEntity.message'>
+      {{pwdEntity.message}}
+    </div>
+
+    <div class="btn-box">
+      <button class="btn-register "  type="button" [ngClass]="setClasses(rglastForm)"   [disabled]="isDisabled(rglastForm)"  (click)="submitLastForm()"  >注册帐号</button>
+    </div>
+    </form>
+
+</div>

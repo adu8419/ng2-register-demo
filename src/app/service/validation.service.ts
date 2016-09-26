@@ -26,7 +26,7 @@ export class ValidationService {
     }
 
     static protocolCheckValidator(control)  {
-        if(this.stringIsNotBlank(control.value)) {
+        if(ValidationService.stringIsNotBlank(control.value)) {
             return null;
         }
         return { 'invalidProtocol': true}
@@ -34,11 +34,12 @@ export class ValidationService {
 
 
     static codeSMSValidator(control) {
-        if(this.stringIsNotBlank(control.value)) {
+        if(ValidationService.stringIsNotBlank(control.value)) {
             return null;
         }
         return { 'requireSMSCode': true}
     }
+
 
     static emailValidator(control) {
         // RFC 2822 compliant regex
@@ -54,14 +55,14 @@ export class ValidationService {
         // (?=.*[0-9])       - Assert a string has at least one number
         ///^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{6,100}$/
 
-        if (this.stringIsNotBlank(control.value)) {
+        if (ValidationService.stringIsNotBlank(control.value)) {
             return null;
         } else {
             return { 'invalidPassword': true };
         }
     }
 
-    private stringIsNotBlank(v) {
+    static stringIsNotBlank(v) {
        if(/^\s*$/g.test(v)  || v == undefined || v == null) {
         return false;
        } 

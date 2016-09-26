@@ -9,16 +9,13 @@ import { routing } from './register.routing';
 
 
 import { RegisterComponent }   from './register.component';
-import { RegisterStartComponent }   from './rg-start.component';
-import { RegisterLastComponent }   from './rg-last.component';
-import { ControlMessagesComponent }  from './control-messages.component';
-
+import { ControlMessagesComponent } from './control-messages.component';
 
 
 
 @NgModule({
   imports:      [ CommonModule, AliModule, ReactiveFormsModule , routing],
-  declarations: [ RegisterComponent, RegisterStartComponent, RegisterLastComponent , ControlMessagesComponent],
+  declarations: [ RegisterComponent, ControlMessagesComponent],
 
 })
 

@@ -9,12 +9,12 @@ import { AppComponent }   from './app.component';
 
 import { ValidationService } from  './service/validation.service';
 import { AliSecurityService } from './service/alisecurity.service';
-
+import { RegisterService } from './service/register.service';
 
 @NgModule({
   imports:      [ BrowserModule, RgModule, routing ],
   declarations: [ AppComponent ],
-  providers: [ ValidationService, AliSecurityService ],
+  providers: [ ValidationService, AliSecurityService, RegisterService ],
   bootstrap:    [ AppComponent ]
 })
 
