@@ -2,17 +2,19 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { RgModule }    from './register/rg.module';
+import { RgDemoModule }    from './register2/rg-demo.module';
+import { HttpAppModule }  from  './https/http-app.module';
 
 import { routing } from './app.routing';
 
-import { AppComponent }   from './app.component';
 
+import { AppComponent }   from './app.component';
 import { ValidationService } from  './service/validation.service';
 import { AliSecurityService } from './service/alisecurity.service';
 import { RegisterService } from './service/register.service';
 
 @NgModule({
-  imports:      [ BrowserModule, RgModule, routing ],
+  imports:      [ BrowserModule, RgModule, RgDemoModule, HttpAppModule,  routing ],
   declarations: [ AppComponent ],
   providers: [ ValidationService, AliSecurityService, RegisterService ],
   bootstrap:    [ AppComponent ]

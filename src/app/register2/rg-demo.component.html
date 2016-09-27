@@ -1,0 +1,46 @@
+<form #f="ngForm">
+	 <label >Product Name</label>
+	 <input type="text"
+	 placeholder="Product Name"
+	 [(ngModel)]="productName"
+	 name="adad"
+	 required
+	 maxlength="5" 
+	 #pdt="ngModel" 
+	 >
+
+	<div [hidden]="pdt.valid || pdt.untouched" class="alert 		alert-danger" style="color: red;">
+      productName is required
+    </div>
+	 <div>
+	 	this product name is {{productName}}
+	 </div>
+
+ <label >CHecks</label>
+	 <input type="checkbox"
+	 [(ngModel)]="myChecked"
+	 name="hibt"
+	 required
+	 #hibt="ngModel" 
+	 >
+	  <div>
+	 	this checkbox  is {{myChecked}}     {{hibt.dirty}}
+	 </div>
+
+
+	<label for="">Sex</label>
+	 <input type="radio"
+	 [(ngModel)]="mySexChecked"
+	 name="sex"
+	 value="1"
+	 >
+	 <input type="radio"
+	 [(ngModel)]="mySexChecked"
+	 name="sex"
+	 value="2"
+	 >
+  <div>
+	 	this Sex  is {{mySexChecked}}    
+	 </div>
+
+</form>
