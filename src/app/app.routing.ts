@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'httpDemo',
+    redirectTo: 'observableDemo',
     pathMatch: 'full'
   }
 ];
