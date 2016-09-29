@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
-import { ValidationService } from '../service/validation.service';
+import { ValidationService } from './validation.service';
 
 @Component({
   //changeDetection: ChangeDetectionStrategy.OnPush,

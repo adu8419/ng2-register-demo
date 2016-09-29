@@ -11,11 +11,13 @@ import { routing } from './register.routing';
 import { RegisterComponent }   from './register.component';
 import { ControlMessagesComponent } from './control-messages.component';
 
-
+import { ValidationService }    from  './validation.service';
+import { RegisterService }      from  './register.service';
 
 @NgModule({
   imports:      [ CommonModule, AliModule, ReactiveFormsModule , routing],
   declarations: [ RegisterComponent, ControlMessagesComponent],
+  providers: [ValidationService, RegisterService]
 
 })
 

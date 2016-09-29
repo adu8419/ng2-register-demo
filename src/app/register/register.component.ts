@@ -3,8 +3,8 @@ import { Router } from  '@angular/router';
 import { FormBuilder, FormGroup,  Validators } from '@angular/forms';
 
 import { ControlEntity } from './control-entity';
-import { ValidationService } from '../service/validation.service';
-import { RegisterService } from '../service/register.service';
+import { ValidationService } from './validation.service';
+import { RegisterService } from './register.service';
 
 
 

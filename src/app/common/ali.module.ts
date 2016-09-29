@@ -5,13 +5,14 @@ import { HttpModule }    from '@angular/http';
 
 import { AliSecurityComponent }   from './alisecurity.component';
 
-
+import { AliSecurityService }   from  './alisecurity.service';
 
 
 @NgModule({
   imports:      [ CommonModule, HttpModule ],
   declarations: [ AliSecurityComponent],
-  exports: [ AliSecurityComponent ]
+  exports: [ AliSecurityComponent ],
+  providers: [AliSecurityService]
 
 })
 

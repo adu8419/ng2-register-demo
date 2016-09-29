@@ -9,8 +9,8 @@ import { SearchBoxComponent }  from  './search-box.component';
 import { SearchResultComponent }  from  './search-result.component';
 import { YouTubeSearchComponent }  from  './youtube-search.component';
 
-import { YouTubeService } from '../service/youtube.service';
-import { LoggedInGuard }  from  '../shared/loggedin-guard';
+import { YouTubeService } from './youtube.service';
+import { LoggedInGuard }  from  './loggedin-guard';
 
 @NgModule({
 	 imports: [  CommonModule, HttpModule, routing ],

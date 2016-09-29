@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter }  from  '@angular/core';
-import { AliSecurityService } from '../service/alisecurity.service';
+import { AliSecurityService } from './alisecurity.service';
 
 @Component({
 	moduleId: module.id,

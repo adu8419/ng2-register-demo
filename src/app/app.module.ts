@@ -11,9 +11,10 @@ import { routing }              from  './app.routing';
 
 
 import { AppComponent }         from  './app.component';
-import { ValidationService }    from  './service/validation.service';
-import { AliSecurityService }   from  './service/alisecurity.service';
-import { RegisterService }      from  './service/register.service';
+
+//import { ValidationService }    from  './service/validation.service';
+//import { AliSecurityService }   from  './service/alisecurity.service';
+//import { RegisterService }      from  './service/register.service';
 
 
 
@@ -28,7 +29,7 @@ import { RegisterService }      from  './service/register.service';
 	  routing 
   ],
   declarations: [ AppComponent ],
-  providers: [ ValidationService, AliSecurityService, RegisterService ],
+ // providers: [ ValidationService, AliSecurityService, RegisterService ],
   bootstrap:    [ AppComponent ]
 })
 

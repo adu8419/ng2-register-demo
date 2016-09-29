@@ -2,7 +2,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { YouTubeSearchComponent } from './youtube-search.component';
-import { LoggedInGuard }  from  '../shared/loggedin-guard';
+import { LoggedInGuard }  from  './loggedin-guard';
 
 export const routing: ModuleWithProviders = RouterModule.forChild([
   	{ 

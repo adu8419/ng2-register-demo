@@ -2,7 +2,7 @@ import { Component, OnInit, ElementRef, EventEmitter }  from  '@angular/core';
 import { Observable }  from  'rxjs/Rx';
 
 import { SearchResult }  from  './search-result';
-import { YouTubeService }  from  '../service/youtube.service';
+import { YouTubeService }  from  './youtube.service';
 
 
 
