@@ -37,4 +37,5 @@ import { Profile }  from  './profile';
 
 export class DefaultComponent {
  	@Input() profile: Profile;
+
 }

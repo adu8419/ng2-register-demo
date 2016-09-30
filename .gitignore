@@ -1,1 +1,6 @@
 node_modules/
+src/aot/
+dist/
+.vscode/
+.git/
+

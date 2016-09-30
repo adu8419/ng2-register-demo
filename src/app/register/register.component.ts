@@ -9,7 +9,6 @@ import { RegisterService } from './register.service';
 
 
 @Component({
-	moduleId: module.id,
 	selector: 'my-register',
 	templateUrl: 'register.component.html',
 	styleUrls: ['register.component.css']

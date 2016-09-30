@@ -2,7 +2,6 @@ import { Component, OnInit, Output, EventEmitter }  from  '@angular/core';
 import { AliSecurityService } from './alisecurity.service';
 
 @Component({
-	moduleId: module.id,
 	selector: 'ali-security',
 	template: `<div  [attr.id]="randomId" class="slider-box" style="display:block;"></div>`,
 	styleUrls: [ 'alisecurity.component.css' ]

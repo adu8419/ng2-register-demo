@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 
+import {RollupModuleProvider} from "./rollup-module.provider";
 
+
+@RollupModuleProvider({})
 @Component({
 	selector: 'my-app',
 	template: `

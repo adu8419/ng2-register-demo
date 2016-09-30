@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { SearchResult }  from  './search-result';
 
-let loadingGif: string = '/src/accsets/images/\g.gif';
+//let loadingGif: string = '/src/accsets/images/\g.gif';
 
 @Component({
  selector: 'youtube-search',
@@ -10,10 +10,9 @@ let loadingGif: string = '/src/accsets/images/\g.gif';
  <div class='container'>
  <div class="page-header">
  <h1>YouTube Search
- <img
- style="float: right;"
- *ngIf="loading"
- src='${loadingGif}' />
+
+  <div *ngIf="loading">Loading...</div>
+
  </h1>
  </div>
 
@@ -39,7 +38,7 @@ let loadingGif: string = '/src/accsets/images/\g.gif';
 
 export class YouTubeSearchComponent {
  results: SearchResult[];
-
+ loading: boolean;
  updateResults(results: SearchResult[]): void {
 	 this.results = results;
  	// console.log("results:", this.results); // uncomment to take a look
